@@ -46,19 +46,30 @@ class SciCalci implements Calculator {
 }
 
 class MathCalci implements Calculator {
+
 	@Override
 	public void add() {
 
-		int a = 10, b = 30;
-		System.out.println("addition:" + (a + b));
+		java.util.Scanner s = new java.util.Scanner(System.in);
+
+		System.out.println("Enter value of a (must be > 100):");
+		int a = s.nextInt();
+
+		if (a > 100) {
+			System.out.println("Enter value of b:");
+			int b = s.nextInt();
+			System.out.println("Math Add: " + (a + b));
+		} else {
+			System.out.println("Error: 'a' must be greater than 100");
+		}
 	}
 
 	@Override
 	public void sub() {
-
 		int a = 100000000, b = 300000;
-		System.out.println("subtraction:" + (a - b));
+		System.out.println("Math Sub: " + (a - b));
 	}
+
 }
 
 public class MyOperation {
