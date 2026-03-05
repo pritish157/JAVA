@@ -31,13 +31,11 @@ class Myimplements extends a implements ATM {
 
 	@Override
 	public void withdraw() {
-		// TODO Auto-generated method stub
 
 	}
 
 	@Override
 	public void deposit() {
-		// TODO Auto-generated method stub
 
 	}
 
