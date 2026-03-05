@@ -2,7 +2,7 @@ package Inheritance;
 
 class Animal {
 
-	Animal getAnimal() {
+	protected Animal getAnimal() {
 		System.out.println("Parent returning Animal");
 		return new Animal();
 	}
@@ -11,7 +11,7 @@ class Animal {
 class Tiger extends Animal {
 
 	@Override
-	Tiger getAnimal() { // Covariant return type
+	public Tiger getAnimal() { // Covariant return type
 		System.out.println("Child returning Tiger");
 		return new Tiger();
 	}
@@ -20,7 +20,7 @@ class Tiger extends Animal {
 class Lion extends Animal {
 
 	@Override
-	Lion getAnimal() { // Covariant return type
+	protected Lion getAnimal() { // Covariant return type
 		System.out.println("Child returning Lion");
 		return new Lion();
 	}
