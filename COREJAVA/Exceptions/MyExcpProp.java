@@ -1,5 +1,6 @@
 package Exceptions;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 class Demo3 {
@@ -7,9 +8,15 @@ class Demo3 {
 	public void m3() {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Connection4 established");
-		System.out.println("Enter your age");
-		int age = scan.nextInt();
-		System.out.println("Age entered is " + age);
+
+		try {
+			System.out.println("Enter your age");
+			int age = scan.nextInt();
+			System.out.println("Age entered is " + age);
+		} catch (InputMismatchException e) {
+
+			System.out.println("Input can't be string");
+		}
 		System.out.println("Connection4 terminated");
 
 	}
